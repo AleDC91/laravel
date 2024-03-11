@@ -16,7 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::view('/users', 'users');
-
-Route::view('/anonimo', 'anonimo', ['users' => [["id" => "1", "name" => "Gino"], ["id" => "2", "name" => "Bepi"]]]);
