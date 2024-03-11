@@ -11,8 +11,10 @@ class BookController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() {
+    public function index()
+    {
         $books = Book::all();
+
         return view('books.index', ['books' => $books]);
     }
 
@@ -35,9 +37,8 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Book $book)
-    {
-        //
+    public function show(Book $book){
+        return view('books.show', ['book' => $book]);
     }
 
     /**
