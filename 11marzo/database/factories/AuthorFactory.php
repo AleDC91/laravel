@@ -21,7 +21,7 @@ class AuthorFactory extends Factory
             'last_name' => fake()-> lastName(),
             'date_of_birth' => fake()->dateTimeBetween('-400 years', '-12 years'),
             'biography' => fake()->realText($maxNbChars = 200),
-            'profile_image' => "https://picsum.photos/seed/picsum/200/300",
+            'profile_image' => "https://picsum.photos/seed/picsum/200/200",
             'website' => fake()->url()
         ];
     

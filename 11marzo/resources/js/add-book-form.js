@@ -1,0 +1,1 @@
+document.getElementById("year").setAttribute("max", new Date().getFullYear());
