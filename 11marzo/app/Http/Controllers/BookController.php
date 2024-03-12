@@ -124,6 +124,14 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+
+        try {
+            $book->delete();
+            return redirect()->route('books.index')->with('success', 'Libro eliminato con successo!');
+        
+        } catch(\Exception $e){
+            return redirect()->route('books.index')->with('error', 'Errore nell\'eliminazione del libro!');
+
+        }
     }
 }

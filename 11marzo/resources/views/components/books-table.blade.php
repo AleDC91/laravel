@@ -5,6 +5,7 @@
             <th scope="col">Author</th>
             <th scope="col">Year of Publication</th>
             <th scope="col">Category</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,13 @@
                 <td class="category">
                     <span class="name"> {{ $book->category->name }} </span>
                     {{-- <span class="description d-none"> {{ $book->category->description }}</span> --}}
+                </td>
+                <td>
+                    <form method="post" action="{{ route('books.destroy', $book->book_id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">X</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
